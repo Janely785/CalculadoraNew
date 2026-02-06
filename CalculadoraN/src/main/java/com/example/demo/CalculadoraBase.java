@@ -15,6 +15,8 @@ public class CalculadoraBase {
 	public float restaParam(@RequestParam float a, @RequestParam float b) {
 		return a-b;
 	}
+	@GetMapping("/multi/{a}/{b}")
+	public float  multi(@PathVariable float a, @PathVariable float b) {
+		return a*b;
 
-	
 }
