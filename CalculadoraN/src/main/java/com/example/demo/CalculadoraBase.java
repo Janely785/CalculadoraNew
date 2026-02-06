@@ -11,5 +11,10 @@ public class CalculadoraBase {
 	public float suma(@PathVariable float a, @PathVariable float b) {
 		return a+b;
 		}
+	@GetMapping("/restaParam")
+	public float restaParam(@RequestParam float a, @RequestParam float b) {
+		return a-b;
+	}
+
 	
 }
