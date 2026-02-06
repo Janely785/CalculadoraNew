@@ -1,0 +1,15 @@
+package com.example.demo;
+import org.springframework.web.bind.annotation.*;
+
+@RestController //lo que hace es decirle a Spring que esta clase va a recibir 
+//peticiones HTTP y va a devolver datos.
+
+@RequestMapping("/calc") //todas las rutas de esta clase empiezan con calc
+
+public class CalculadoraBase {
+	@GetMapping("/suma/{a}/{b}")
+	public float suma(@PathVariable float a, @PathVariable float b) {
+		return a+b;
+	}
+	
+}
